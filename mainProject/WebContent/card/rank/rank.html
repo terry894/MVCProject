@@ -1,0 +1,64 @@
+<html lang="kr">
+
+<head>
+    <title>ranking</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700"
+        rel="stylesheet">
+
+    <!-- Template Styles -->
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+
+    <link href="../../css/rank.css" type="text/css" rel="stylesheet">
+</head>
+<!-- ======================================================================= -->
+
+<body>
+    <main id="contaner">
+        <div class="rank-table">
+            <table>
+                <thead>
+                    <tr>
+                        <td class="rank">순위</td>
+                        <td class="profileImg"></td>
+                        <td class="name">아이디</td>
+                        <td class="assets">보유 자산</td>
+                        <td class="assetsGrowth">자산 상승율</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="profileImg" rowspan="2"></td>
+                        <td class="name" rowspan="2">ff</td>
+                        <td class="assets" rowspan="2">1111</td>
+                        <td class="assetsGrowth" rowspan="2">11%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="rank-table">
+            <table>
+                <tbody id="myRank">
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="profileImg" rowspan="2"></td>
+                        <td class="name" rowspan="2">${myInfo.nickName}</td>
+                        <td class="assets" rowspan="2">
+                            <fmt:formatNumber value="${myInfo.vMoney}" pattern="#,###" />
+                        </td>
+                        <td class="assetsGrowth" rowspan="2">
+                            <fmt:formatNumber value="${myInfo.vMoney/10000}" pattern="#,###" />%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
